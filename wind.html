@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>WVD: Weather vs. Latitude</title>
+    <title>WVD: Wind vs. Latitude</title>
     <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/minty/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-9NlqO4dP5KfioUGS568UFwM3lbWf3Uj3Qb7FBHuIuhLoDp3ZgAqPE1/MYLEBPZYM" crossorigin="anonymous">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.9/css/weather-icons.min.css" rel="stylesheet">
@@ -23,7 +23,7 @@
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
+                <li class="nav-item">
                     <a class="nav-link" href="https://adam-forest.github.io/Web-Visualization-Dashboard/">WVD: Weather
                         vs. Latitude <span class="sr-only">(current)</span></a>
                 </li>
@@ -45,7 +45,7 @@
                         <a class="dropdown-item" href="max_temp.html"><i class='fas fa-temperature-high'></i> Latitude
                             vs.
                             Tempurature</a>
-                        <a class="dropdown-item" href="wind.html"><i class='fas fa-wind'></i> Latitude vs. Wind
+                        <a class="dropdown-item active" href="wind.html"><i class='fas fa-wind'></i> Latitude vs. Wind
                             Speed</a>
                         <a class="dropdown-item" href="clouds.html"><i class="wi wi-cloudy"></i> Latitude vs.
                             Cloudiness</a>
@@ -64,26 +64,18 @@
             <div class="col-lg-7 col-sm-12">
                 <div class="card mb-3">
                     <div class="card-header">
-                        <h4 class="card-title">Summary: Latitude vs. X</h4>
+                        <h4 class="card-title"><i class='fas fa-wind'></i> Latitude vs. Wind</h4>
                     </div>
                     <div class="card-body">
-                        <img class="img-fluid float-left p-1"
-                            src="https://raw.githubusercontent.com/Adam-Forest/Unit-6-WeatherPy/master/Lat_vs_Max_Temp.png"
-                            alt="Latitude vs. Max Temp">
-                        <p class="card-text p-3">
-                            The purpose of this project was to analyze how weather changes as you get closer to the
-                            equator. To accomplish this analysis, we first pulled data from the OpenWeatherMap API to
-                            assemble a dataset on over
-                            500 cities.
-                        </p>
+                        <div class="col-sm-12 text-center">
+                            <a href="wind.html" class="card-link">
+                                <img class="img-fluid"
+                                    src="https://github.com/Adam-Forest/Unit-6-WeatherPy/blob/master/Lat_vs_Wind_Speed.png?raw=true"
+                                    alt="Latitude vs. Wind Speed">
+                                <br>Latitude vs. Wind Speed<br><i class='fas fa-wind'></i></a>
+                        </div>
                         <p class="card-text">
-                            After assembling the dataset, we used Matplotlib to plot various aspects of the weather vs.
-                            latitude.
-                            Factors we looked at included: temperature, cloudiness, wind speed, and humidity. This site
-                            provides the
-                            source data and visualizations created as part of the analysis, as well as explanations and
-                            descriptions of
-                            any trends and correlations witnessed.
+                            Windspeed does not seem to have any correlation with latitude.
                         </p>
                     </div>
 
