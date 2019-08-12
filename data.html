@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Data: Weather vs. Latitude</title>
-    
+
     <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/minty/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-9NlqO4dP5KfioUGS568UFwM3lbWf3Uj3Qb7FBHuIuhLoDp3ZgAqPE1/MYLEBPZYM" crossorigin="anonymous">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.9/css/weather-icons.min.css" rel="stylesheet">
@@ -68,7 +68,7 @@
                     <div class="card-header">
                         <h4 class="card-title">Data: Latitude vs. X</h4>
                     </div>
-                    <div class="card-body" style="overflow:auto;">
+                    <div class="card-body" style="overflow:auto">
                         <div class="row">
                             <table id="data_table" class="table table-hover">
                                 <thead>
@@ -7233,8 +7233,8 @@
             </div>
         </div>
     </div>
- 
-    
+
+
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <script type="text/javascript" charset="utf8"
         src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
@@ -7242,7 +7242,15 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <script>
         $(document).ready(function () {
-            $('#data_table').DataTable();
+            $('#data_table').DataTable({
+                "columnDefs": [
+                    {
+                        "targets": [0,1],
+                        "visible": false,
+                        "searchable": false
+                    }
+                ]
+            });
         });
     </script>
 </body>
